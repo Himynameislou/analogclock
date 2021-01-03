@@ -5,11 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Analog Clock</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="bodycolor">
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+      <a class="nav-item nav-link active" href="https://www.linkedin.com/in/luis-vegerano/">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <h1>Analog JavaScript Clock</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clock Assembly -->
+    <div class="clock">
+
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+
+    </div>
+
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
   </script>
