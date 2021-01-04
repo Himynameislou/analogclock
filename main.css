@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #003166;
+  background: #2b70b9;
 }
 
 /* Adding Light Mode */
@@ -151,5 +151,10 @@ body.light .mn:before{
 }
 
 body.light .toggleClass {
-  
+  background: #2b70b9;
+  color: #091921;
+}
+
+body.light .toggleClass:before {
+  content: 'Dark Mode';
 }
