@@ -8,8 +8,8 @@
   <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 
-<body>
 
+<body>
   <!-- Clock Assembly -->
   <div class="clock">
     <div class="hour">
@@ -24,7 +24,16 @@
       <div class="sc" id="sc"></div>
     </div>
   </div>
+  <!-- Adding Light and Dark Mode Options -->
+  <div class="toggleClass" onclick="toggleClass()">
+
+  </div>
   <script type="text/javascript">
+    function toggleClass() {
+      const body = document.querySelector('body');
+      body.classList.toggle('light');
+    }
+
     const deg = 6;
     const hr = document.querySelector('#hr');
     const mn = document.querySelector('#mn');

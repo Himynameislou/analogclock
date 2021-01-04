@@ -12,20 +12,37 @@ body {
   background: #003166;
 }
 
+/* Adding Light Mode */
+body.light {
+  background: #d1dae3;
+}
+
 .clock {
   width: 350px;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(clock.png);
+  background:  #2b70b9 url(clock.png);
   background-size: cover;
   border: 4px solid #2b70b9;
   border-radius: 50%;
-  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
-    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
-    0 15px 15px rgba(0, 0, 0, 0.3),
-    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+              20px 20px 20px rgba(0, 0, 0, 0.3),
+              inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+              inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Adding Light mode to clock face */
+body.light .clock {
+  background: #d1dae3 url(clock.png);
+  background-size: cover;
+  border: 4px solid #cad3dc;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+              10px 10px 10px rgba(0, 0, 0, 0.3),
+              inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+              inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .clock:before {
@@ -36,6 +53,10 @@ body {
   background: bisque;
   border-radius: 50%;
   z-index: 10000;
+}
+
+body.light .clock:before{
+  background: #008eef;
 }
 
 .clock .hour,
@@ -92,6 +113,10 @@ body {
   border-radius: 6px 6px 0 0;
 }
 
+body.light .mn:before{
+  background: #091921;
+}
+
 .sc:before {
   content: '';
   position: absolute;
@@ -100,4 +125,31 @@ body {
   background: #5AC8FA;
   z-index: 12;
   border-radius: 6px 6px 0 0;
+}
+/* Toggle styling changes */
+.toggleClass {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  color: #d1dae3;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggleClass:before {
+  position: absolute;
+  left: 25px;
+  content: 'Light Mode';
+  white-space: nowrap;
+}
+
+body.light .toggleClass {
+  
 }
